@@ -1,0 +1,955 @@
+/* Eksamensprojekt omkring Amo lavet af Trine Rahbek Markussen */
+
+/*Farver*/
+:root {
+  /* farver */
+  --brown: #624F3E;
+  --darkblue: #A7AEB8;
+  --beige: #F4EBDE;
+  --green: #C1C2A3;
+}
+/*Fonte*/
+@import url('https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@700&family=Source+Sans+3:wght@300&display=swap');
+
+
+/*Generalt style på alle skærme: Body regler*/
+ body {
+  font-family: 'Source Sans 3', sans-serif;
+  font-family: 'Chakra Petch', sans-serif;
+  background-position: left right;
+  background-size: 100%;
+  background-image: url(../images/baggrundgennemsigtig.png);
+  background-repeat: repeat-y;
+  background-color: var(--green);
+  min-height: 100vh;
+}
+
+
+/*Generalt: Overskrifter og brødtekst*/
+h1{
+  font-family:'Chakra Petch', sans-serif;
+  color: var(--brown);
+  background: var(--beige);
+  text-align: center;
+  width: 100%;
+}
+
+h2{
+  font-family:'Chakra Petch', sans-serif;
+  color: var(--brown);
+  text-align: center;
+  width: 100%;
+}
+
+h3{
+  color: var(--darkblue);
+  text-align: center;
+  width: 100%;
+}
+
+h4{
+  color: var(--darkblue);
+  text-align: left;
+  width: 100%;
+}
+
+h5{
+  font-family:'Chakra Petch', sans-serif;
+  color: var(--darkblue);
+  width: 100%;
+}
+
+h6{
+  color: var(--brown);
+  text-align: center;
+  width: 100%;
+}
+
+p{
+  font-family: 'Source Sans 3', sans-serif;
+  color: var(--brown);
+  text-decoration: none;
+  width: 100%;
+}
+
+/*Generalt Style på alle skærme: Header og navigation*/
+*{
+  margin: 0;
+  padding: 0
+  box-sizing: border-box;
+  text-decoration: none;
+  font-family:'Chakra Petch', sans-serif;
+}
+
+header{
+  position: fixed;
+  top: 0; left:0; right: 0;
+  background: var(--beige);
+  box-shadow: 0 5px 10px var(-darkblue)(0,0,0,.1);
+  padding: 0px 7%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  z-index: 1000;
+}
+
+header .logo{
+  font-weight: bolder;
+  font-size: 25px;
+  color: var(--beige);
+}
+
+header .navbar ul{
+  list-style: none;
+}
+
+header .navbar ul li{
+  position: relative;
+  float: left;
+}
+
+header .navbar ul li a{
+  font-size: 20px;
+  padding: 20px;
+  color: var(--brown);
+  display: block;
+}
+
+header .navbar ul li a:hover{
+  background: var(--darkblue);
+  color: var(--beige);
+}
+
+header .navbar ul li ul{
+  position: absolute;
+  left: 0;
+  width: 170px;
+  background: var(--beige);
+  display: none;
+}
+
+header .navbar ul li ul li{
+  width: 100%;
+  border-top: 1px solid var(-darkblue)(0,0,0,.1);
+}
+
+header .navbar ul li ul li ul{
+  left: 200px;
+  top: 0;
+}
+
+header .navbar ul li:focus-within > ul,
+header .navbar ul li:hover > ul{
+  display: initial;
+}
+
+#menu-bar{
+  display: none;
+}
+
+header label{
+  font-size: 20px;
+  color: var(--darkblue);
+  cursor: pointer;
+  display: none;
+}
+
+/*Generalt Style på alle skærme: Forside*/
+.amohvedemel{
+  width: 100%;
+}
+
+.amohvedemelmobil{
+  width: 100%;
+}
+
+.kageogbrod{
+  width: 100%;
+}
+
+.kageogbrodmobil{
+  width: 100%;
+}
+
+.boksinfographic{
+  background: var(--beige);
+  max-width: 960px;
+  margin: auto;
+  line-height: 1.6;
+}
+
+.hvedemelbillede{
+ width: 100%;
+}
+
+/* Forside Natur+ tekst*/
+.del1natur{
+  padding: 5px;
+}
+
+.del2natur{
+  padding: 5px;
+}
+
+.box1landningpage{
+  background: var(--beige);
+  line-height: 1.6;
+}
+
+.naturikon{
+ width: 100%;
+}
+
+/* Underside: Opskrift på kardemommesnurrer*/
+.yderbox{
+  background: var(--beige);
+  margin: 10%;
+  padding: 5%;
+  text-align: left;
+  box-sizing: content-box;
+  font-weight: 1000;
+  line-height: 1.6;
+}
+
+.box{
+  background: var(--darkblue);
+  margin: 10%;
+  padding: 0;
+  text-align: center;
+  box-sizing: content-box;
+  line-height: 1.6;
+}
+
+#dej{
+  line-height: 2;
+}
+
+#dej2{
+  line-height: 2;
+}
+
+#dej3{
+  line-height: 2;
+}
+
+#dej4{
+  line-height: 2;
+}
+
+/*Bagning underside*/
+div.galleri{
+  margin: 30px;
+  padding: 5px;
+  border: 1px solid #ccc;
+  background: var(--beige);
+  text-align: center;
+}
+
+div.galleri:hover{
+  border: 1px solid #777;
+}
+
+div.galleri img{
+  width: 200px;
+  height: 300px;
+}
+
+div.desc{
+  padding: 15px;
+  text-align: center;
+  color: var(--brown);
+  font-size: 20px;
+  line-height: 1.6;
+}
+
+/* Footer Computer */
+.container{
+  width: 100%;
+  background-color: var(--blue);
+  margin: auto;
+}
+.row{
+  display: flex;
+  flex-wrap: wrap;
+}
+
+ul{
+  list-style: none;
+}
+
+.footer{
+  width: 100%;
+  background-color: var(--beige);
+  padding: 70px 0;
+}
+
+.footer-col{
+  font-size: 20px;
+  width: 33,33%;
+  padding: 0 15px;
+}
+
+/*overskrifer - navigation, åbningstider, kontakt og sociale medier*/
+.footer-col h5{
+  font-size: 25px;
+  font-weight: 500;
+  margin-bottom: 30px;
+  margin-left: 10%;
+  font-weight: 500px;
+  position: relative;
+}
+
+/*overskrifer - navigation, åbningstider, kontakt og sociale medier*/
+.footer-col h5::before{
+  content:"";
+  position: absolute;
+  left: 0;
+  bottom: -10px;
+  background-color: var(--beige);
+  height: 2px;
+  box-sizing: border-box;
+  width: 50%;
+  }
+
+.footer-col ul li:not(:last-child){
+  margin-bottom: 20px;
+}
+
+.footer-col ul li a{
+  font-family: 'Source Sans 3', sans-serif;
+  font-size: 20px;
+  text-transform: none;
+  color: var(--brown);
+  text-decoration: none;
+  font-weight: 300;
+  display: block;
+  transition: all 0.3s ease;
+  margin-left: 10%;
+}
+
+.footer-col ul li a:hover{
+  padding-left: 10px;
+}
+
+/* 1. Mobile enheder (begynd her) */
+@media only screen and (max-width: 768px) {
+
+body {
+    background-position: left right;
+    background-size: 100%;
+    background-image: url(../images/baggrundgennemsigtig.png);
+    background-repeat: repeat-y;
+    background-color: var(--darkblue);
+    min-height: 100vh;
+  }
+
+/*Lille skærm: Overskrifter*/
+h1{
+    font-family:'Chakra Petch', sans-serif;
+    color: var(--brown);
+    background: var(--beige);
+    text-align: center;
+    margin-top: 54%;
+    width: 100%;
+    font-size: 300;
+}
+
+h2{
+    font-family:'Chakra Petch', sans-serif;
+    color: var(--brown);
+    text-align: center;
+    width: 100%;
+    font-size: 130%;
+    padding-bottom: 0.1%;
+}
+
+h3{
+    color: var(--darkblue);
+    text-align: center;
+    font-size: 150%;
+
+}
+
+h4{
+    color: var(--darkblue);
+    text-align: left;
+    font-size: 100%;
+}
+
+h6{
+    color: var(--brown);
+    text-align: center;
+    font-size: 30px;
+}
+
+/* Overskrifter til footer: FORHANDLER, FORBRUGER KONTAKT & ERHVERV KONTAKT*/
+h5{
+    font-family:'Chakra Petch', sans-serif;
+    color: var(--beige);
+}
+
+/*Lille skærm: brødtekst*/
+p{
+    font-family: 'Source Sans 3', sans-serif;
+    color: var(--brown);
+    text-decoration: none;
+}
+
+/* Lille skræm: Navigation/menu*/
+header{
+    position: fixed;
+    top: 0; left:0; right: 0;
+    background: var(--green);
+    box-shadow: 0 5px 10px var(-darkblue)(0,0,0,.1);
+    padding: 0px 7%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    z-index: 1000;
+}
+
+header{
+    padding: 20px;
+}
+
+header label{
+    display: initial;
+}
+
+header .navbar{
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    background: var(--green);
+    border-top: 1px solid var(-darkblue)(0,0,0,.1);
+    display: none;
+}
+
+header .navbar ul li a{
+  font-size: 20px;
+  padding: 20px;
+  color: var(--brown);
+  display: block;
+}
+
+header .navbar ul li a:hover{
+  background: var(--beige);
+  color: var(--darkblue);
+}
+
+header .navbar ul li ul{
+  position: absolute;
+  left: 0;
+  width: 170px;
+  background: var(--green);
+  display: none;
+}
+
+header .navbar ul li{
+  width: 100%;
+}
+
+header .navbar ul li ul{
+  position: relative;
+  width: 100%;
+}
+
+header .navbar ul li ul li{
+  background: var(--green);
+}
+
+header .navbar ul li ul li{
+  width: 100%;
+  left: 30px;
+}
+
+#menu-bar:checked ~ .navbar{
+  display: initial;
+}
+
+/*Lille skærm: Landningpage Amo*/
+/*Billede af amohvedemel "sæt pris på noget hjemmelavet - sæt pris på amo"*/
+.amohvedemel{
+ display: none;
+}
+
+.amohvedemelmobil{
+  margin-top: 50%;
+  margin-bottom: 20%;
+  width: 100%;
+  object-fit: cover;
+}
+
+/*Lille skærm: Landningpage*/
+/*Lille skærm: Collage til stor skærm*/
+.kageogbrod{
+  display: none;
+}
+
+/*Lille skærm: Enkle billeder til lille skærm*/
+.kageogbrodmobil{
+  width: 60%;
+  padding: 10%;
+  margin: 10%;
+}
+
+/*Lille skærm: Infographic til stor skærm*/
+.infographic{
+  display: none;
+}
+
+/*Lille skærm: Infographic små billeder til lille skærm*/
+.infographicmobil{
+  width: 100%;
+  margin-top: 5%;
+  text-align: center;
+}
+
+#infographictekst{
+  padding: 15px;
+  line-height: 2;
+}
+
+.hvedemelbillede{
+  width: 50%;
+  position: center;
+  padding-left: 25%;
+  padding-right: 25%;
+  padding-top: 20%;
+}
+
+/*Lille skærm: Forside tekst omkring hvede*/
+.box1landningpage{
+  padding: 5%;
+  margin: 10%;
+  line-height: 1.6;
+}
+
+#hvedemeltyper{
+  float: inherit;
+  text-align: center;
+}
+
+.naturikon{
+  width: 50%;
+  padding-left: 25%;
+  padding-right: 25%;
+  text-align: center;
+}
+
+/*Lille skærm Underside - opskrift på kardemommesnurrer (opskriftkardemommesnurrer.html)*/
+.kardemommebilled{
+  width: 100%;
+  text-align: center;
+}
+
+/*Lille skærm: Underside - opskrift på surdejsboller (surdejsboller.html)*/
+.surdej{
+  width: 100%;
+  text-align: center;
+}
+
+/*Lille skærm: Underside - opskrift på flutes (flutes.html)*/
+.flutes{
+  width: 100%;
+  text-align: center;
+}
+
+/*Lille skærm: Underside - opskrift på kanelsnegle (kanelsnegle.html)*/
+.kanelsnegle{
+  width: 100%;
+  text-align: center;
+}
+
+/*Lille skærm: Underside - opskrift på bananbrød (bananbrod.html)*/
+.bananbrod{
+  width: 100%;
+  text-align: center;
+}
+
+/*Lille skærm: Underside - opskrift på mandelcroissanter(croissant.html)*/
+.croissant{
+  width: 100%;
+  text-align: center;
+}
+
+/*lille skærm: Underside - opskrifter boks */
+.box{
+  background: var(--green);
+  margin: 20%;
+  padding: 5%;
+  text-align: center;
+  box-sizing: content-box;
+}
+
+
+/* Lille skærm: Footer til mobil */
+.footer{
+  width: 100%;
+  background-color: var(--green);
+  padding: 70px 0;
+}
+
+.hvedefooter{
+  background: var(--green);
+  width: 100%;
+}
+
+.footer-col ul li a{
+  font-family: 'Source Sans 3', sans-serif;
+  font-size: 16px;
+}
+}
+
+/* 2. Tablets mv. (fortsæt her) */
+@media only screen and (min-width: 768px) {
+
+/*Mellem skærm: Overskrifter*/
+  h1{
+      font-family:'Chakra Petch', sans-serif;
+      color: var(--brown);
+      background: var(--beige);
+      text-align: center;
+      margin-top: 30%;
+      width: 100%;
+      font-size: 80px;
+    }
+    h2{
+      font-family:'Chakra Petch', sans-serif;
+      color: var(--brown);
+      text-align: center;
+      width: 100%;
+      font-size: 150%;
+      padding-bottom: 0.1%;
+}
+
+h3{
+      color: var(--darkblue);
+      text-align: center;
+      font-size: 150%;
+}
+
+h4{
+      color: var(--darkblue);
+      text-align: left;
+      font-size: 100%;
+}
+
+h5{
+      font-family:'Chakra Petch', sans-serif;
+      color: var(--darkblue);
+}
+
+h6{
+      color: var(--brown);
+      text-align: center;
+      font-size: 50px;
+}
+
+p{
+      font-family: 'Source Sans 3', sans-serif;
+      color: var(--brown);
+      text-decoration: none;
+}
+
+/*Mellemstørrelse skærm: Forside infographic om fremstilling af Amo hvedemel*/
+.infographic{
+  margin-top: 20%;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+}
+
+/*Mellemstørrelse skærm : Forside Infographic små billeder til lille skærm*/
+.infographicmobil{
+  display: none;
+}
+
+.naturikon{
+  width: 20%;
+  padding-left: 40%;
+  padding-right: 40%;
+}
+
+.box1landningpage{
+  padding: 5%;
+  margin: 10%;
+  line-height: 1.6;
+}
+
+/*Mellemstørrelse skærm: Forside billede af hvedemel*/
+.hvedemelbillede{
+  position: center;
+  width: 70%;
+  padding-left: 30%;
+  padding-right: 30%;
+  padding-top: 10%;
+}
+
+/*Mellemstørrelse skærm: Forside tekst omkring hvede*/
+#hvedemeltyper{
+  float: inherit;
+  text-align: center;
+}
+
+/*Mellemstørrelse skærm: Underside - Opskrifter boks*/
+.box{
+  background: var(--darkblue);
+  margin: 10%;
+  padding: 20px;
+  text-align: center;
+  box-sizing: content-box;
+  line-height: 1.6;
+}
+
+/*Mellemstørrelse skærm: Underside - opskrift på kardemommesnurrer (opskriftkardemommesnurrer.html)*/
+.kardemommebilled{
+  width: 100%;
+  text-align: center;
+}
+
+/*Mellemstørrelse skærm: Underside - opskrift på surdejsboller (surdejsboller.html)*/
+.surdej{
+    width: 100%;
+    text-align: center;
+}
+
+/*Mellemstørrelse skærm: Underside - opskrift på flutes (flutes.html)*/
+.flutes{
+  width: 100%;
+  text-align: center;
+}
+
+/*Mellemstørrelse skærm: Underside - opskrift på kanelsnegle (kanelsnegle.html)*/
+.kanelsnegle{
+  width: 100%;
+  text-align: center;
+}
+
+/*Mellemstørrelse skærm: Underside - opskrift på bananbrød (bananbrod.html)*/
+.bananbrod{
+  width: 100%;
+  text-align: center;
+}
+
+/*Mellemstørrelse skærm: Underside - opskrift på mandelcroissanter(croissant.html)*/
+.croissant{
+  width: 100%;
+  text-align: center;
+}
+
+/* Mellemstørrelse skærm: Footerbillede af hvedeplanten*/
+.hvedefooter{
+  width: 100%;
+  background: var(--beige);
+}
+}
+
+/* 3. Stor skærm (slut her) */
+@media only screen and (min-width: 1024px) {
+
+/*Stor skærm: overskrifer*/
+h1{
+    font-family:'Chakra Petch', sans-serif;
+    color: var(--brown);
+    background: var(--beige);
+    text-align: center;
+    margin-top: 20%;
+    width: 100%;
+    font-size: 80px;
+  }
+
+h2{
+    font-family:'Chakra Petch', sans-serif;
+    color: var(--brown);
+    text-align: center;
+    width: 100%;
+    font-size: 150%;
+    padding-bottom: 0.1%;
+}
+
+h3{
+    color: var(--darkblue);
+    text-align: center;
+    font-size: 150%;
+}
+
+h4{
+    color: var(--darkblue);
+    text-align: left;
+    font-size: 100%;
+}
+
+h5{
+    font-family:'Chakra Petch', sans-serif;
+    color: var(--darkblue);
+}
+
+h6{
+    color: var(--brown);
+    text-align: center;
+    font-size: 50px;
+}
+
+p{
+    font-family: 'Source Sans 3', sans-serif;
+    color: var(--brown);
+    text-decoration: none;
+}
+
+/*Forside Amo*/
+/*Billede af amohvedemel "sæt pris på noget hjemmelavet - sæt pris på amo"*/
+/*Stor skærm - Forsidebillede til stor skærm*/
+.amohvedemel{
+    margin-top: 10%;
+    text-align: center;
+    width: 100%;
+}
+/*Stor skærm: Forsidebillede til lille skærm*/
+.amohvedemelmobil{
+    display: none;
+}
+
+/*Stor skærm: Forside infographic om fremstilling af Amo hvedemel*/
+.boksinfographic{
+  margin: 10%;
+  padding: 7%;
+}
+
+/*Stor skærm: Forside infographic om fremstilling af Amo hvedemel*/
+.infographic{
+  margin-top: 20%;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+}
+
+/*Stor skærm: Infographic små billeder til lille skærm*/
+.infographicmobil{
+  display: none;
+}
+
+.kageogbrod{
+  margin-top: 20%;
+  width: 100%;
+  text-align: center;
+}
+
+.kageogbrodmobil{
+  display: none;
+}
+
+
+/*Stor skærm: Forside tekst omkring hvede*/
+#hvedemeltyper{
+  float: inherit;
+  text-align: center;
+}
+
+.hvedemelbillede{
+  width: 30%;
+  position: center;
+}
+
+
+.naturikon{
+  width: 20%;
+  padding-left: 40%;
+  padding-right: 40%;
+}
+
+.box1landningpage{
+  padding: 5%;
+  margin: 10%;
+  line-height: 1.6;
+}
+
+
+/*Bagning underside*/
+div.galleri{
+  margin-left: 30%;
+  margin-right: 30%;
+  padding: 5px;
+  border: 1px solid #ccc;
+  background: var(--beige);
+  text-align: center;
+}
+
+div.galleri:hover{
+  border: 1px solid #777;
+}
+
+div.galleri img{
+  width: 200px;
+  height: 300px;
+}
+
+div.desc{
+  padding: 15px;
+  text-align: center;
+  color: var(--brown);
+  font-size: 20px;
+  line-height: 1.6;
+}
+
+/*Stor skær: bokse i opskrifterne*/
+.box{
+  background: var(--darkblue);
+  margin: 10%;
+  padding: 20px;
+  text-align: center;
+  box-sizing: content-box;
+  line-height: 1.6;
+}
+
+/*Stor skærm: Underside - opskrift på kardemommesnurrer (opskriftkardemommesnurrer.html)*/
+.kardemommebilled{
+  margin-top: 10%;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+}
+
+/*Stor skærm: Underside - opskrift på surdejsboller (surdejsboller.html)*/
+.surdej{
+  margin-top: 10%;
+  width: 100%;
+  text-align: center;
+}
+
+/*Stor skærm: Underside - opskrift på flutes (flutes.html)*/
+.flutes{
+  margin-top: 10%;
+  width: 100%;
+  text-align: center;
+}
+
+/*Stor skærm: Underside - opskrift på kanelsnegle (kanelsnegle.html)*/
+.kanelsnegle{
+  margin-top: 10%;
+  width: 100%;
+  text-align: center;
+}
+
+/*Stor skærm: Underside - opskrift på bananbrød (bananbrod.html)*/
+.bananbrod{
+  margin-top: 10%;
+  width: 100%;
+  text-align: center;
+}
+
+/*Stor skærm: Underside - opskrift på mandelcroissanter(croissant.html)*/
+.croissant{
+  margin-top: 10%;
+  width: 100%;
+  text-align: center;
+}
+
+/* Stor skærm: Footerbillede af hvedeplanten*/
+.hvedefooter{
+  width: 100%;
+  background: var(--beige);
+}
+
+}
